@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Meta Questions, Please</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #d32f2f;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #616161;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: black;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+        
+        main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+        
+        .warning {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: 8px;
+            background-color: var(--light-gray);
+        }
+        
+        .warning h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .warning p {
+            font-size: 1.125rem;
+            color: var(--primary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 640px) {
+            .examples {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .example-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .example-box h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .bad h2 {
+            color: var(--secondary);
+        }
+        
+        .good h2 {
+            color: #388e3c;
+        }
+        
+        .example-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .example-item {
+            padding: 0.75rem;
+            border-radius: 6px;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 0.9375rem;
+        }
+        
+        .bad .example-item {
+            background-color: #ffebee;
+        }
+        
+        .good .example-item {
+            background-color: #e8f5e9;
+        }
+        
+        .bad .example-item::before {
+            content: "×";
+            position: absolute;
+            left: 0.75rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .good .example-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0.75rem;
+            color: #388e3c;
+            font-weight: bold;
+        }
+        
+        .description {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--medium-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .description h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .description p {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--dark-gray);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .copy-section {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--medium-gray);
+            margin-top: 2rem;
+        }
+        
+        .copy-section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .copy-link {
+            display: flex;
+            background-color: var(--light-gray);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .copy-link input {
+            flex: 1;
+            border: none;
+            padding: 0.75rem 1rem;
+            font-size: 0.875rem;
+            background-color: transparent;
+        }
+        
+        .copy-link button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 1.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .copy-link button:hover {
+            background-color: var(--dark-gray);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section class="warning">
+                <h1>No Meta Questions, Please</h1>
+                <p>The person who shared this link prefers direct communication without meta-questions. Please ask your complete question right away.</p>
+            </section>
+            
+            <section class="description">
+                <h2>About This Preference</h2>
+                <p>Meta-questions are questions about questions, like "Can I ask you something?" instead of just asking what you want to know. They create unnecessary steps in communication.</p>
+                <p>By sharing this link, this person is requesting that you skip the meta-questions and get straight to the point.</p>
+            </section>
+            
+            <section class="examples">
+                <div class="example-box bad">
+                    <h2>Don't Do This</h2>
+                    <div class="example-list">
+                        <div class="example-item">Are you there?</div>
+                        <div class="example-item">Can I ask you a question?</div>
+                        <div class="example-item">Do you have a minute?</div>
+                        <div class="example-item">Hi, are you busy?</div>
+                    </div>
+                </div>
+                
+                <div class="example-box good">
+                    <h2>Do This Instead</h2>
+                    <div class="example-list">
+                        <div class="example-item">Hi, do you have the project files for the client meeting?</div>
+                        <div class="example-item">Can you review this document by Friday?</div>
+                        <div class="example-item">What time works for you to discuss the budget?</div>
+                        <div class="example-item">I need help with the server configuration.</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="copy-section">
+                <h2>Want to Share This?</h2>
+                <p>Copy this link to add to your profiles:</p>
+                <div class="copy-link">
+                    <input type="text" value="https://sites.google.com/view/nometaqp" id="profile-link" readonly>
+                    <button onclick="copyLink()">Copy</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        © 2025 | spark1ch
+    </footer>
+    
+    <script>
+        function copyLink() {
+            const linkInput = document.getElementById('profile-link');
+            linkInput.select();
+            document.execCommand('copy');
+            
+            const button = document.querySelector('.copy-link button');
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            setTimeout(() => {
+                button.textContent = originalText;
+            }, 2000);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.warning, .description, .examples, .copy-section');
+            elements.forEach((el, i) => {
+                setTimeout(() => {
+                    el.style.opacity = 1;
+                    el.style.transform = 'translateY(0)';
+                }, 100 * i);
+            });
+        });
+    </script>
+</body>
+</html>
